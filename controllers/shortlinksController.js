@@ -13,7 +13,7 @@ class ShortlinksController {
     catch(error) {
       res.status(401).json({
         success: false,
-        message: `Save URL error: ${error}`
+        message: `${error}`
       });
     }
   }
@@ -28,7 +28,7 @@ class ShortlinksController {
       });
     }
     catch(error) {
-      res.status(401).json({
+      res.status(200).json({
         success: false,
         message: `URL error: ${error}`
       });
